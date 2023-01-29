@@ -1,0 +1,12 @@
+type Address {
+  streetName: String
+}
+type User {
+  address: Address
+  firstName: String
+  lastName: String
+  age: Int
+}
+type Query {
+  user: [User]
+}
