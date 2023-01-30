@@ -5,4 +5,7 @@ export interface User {
     streetName: string;
   };
   age: number;
+  phone: string;
+  email: string;
+  avatar: string;
 }
