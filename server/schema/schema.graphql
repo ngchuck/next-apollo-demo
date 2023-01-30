@@ -1,12 +1,15 @@
 type Address {
-  streetName: String
+    streetName: String
 }
 type User {
-  address: Address
-  firstName: String
-  lastName: String
-  age: Int
+    address: Address
+    firstName: String
+    lastName: String
+    age: Int
+    phone: String
+    email: String
+    avatar: String
 }
 type Query {
-  user: [User]
+    user(offset: Int, limit: Int) : [User]
 }

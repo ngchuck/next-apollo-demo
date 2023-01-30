@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "build": "rimraf ./build && tsc",
-    "start": "npm run build && node server.js",
+    "traceResolution": "tsc --traceResolution",
+    "start": "node build/server.js",
     "start:dev": "npx nodemon"
   },
   "dependencies": {
