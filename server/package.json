@@ -7,7 +7,7 @@
   "scripts": {
     "build": "rimraf ./build && tsc",
     "traceResolution": "tsc --traceResolution",
-    "start": "node build/server.js",
+    "start": "node --es-module-specifier-resolution=node build/server.js",
     "start:dev": "npx nodemon"
   },
   "dependencies": {
@@ -17,6 +17,7 @@
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "graphql": "^16.6.0",
+    "graphql-tag": "^2.12.6",
     "http": "^0.0.1-security",
     "typescript": "^4.7.4"
   },

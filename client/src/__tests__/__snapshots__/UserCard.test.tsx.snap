@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders UserCard unchanged 1`] = `
+<div>
+  <div
+    class="card"
+  >
+    <h3>
+      Deep
+       
+      Chakraborty
+       - 
+      37
+    </h3>
+    <p>
+      22 Royal crest Avenue
+    </p>
+    <p>
+      deep@gmail.com
+    </p>
+    <p>
+      +44-7570324243
+    </p>
+    <img
+      src=""
+    />
+  </div>
+</div>
+`;

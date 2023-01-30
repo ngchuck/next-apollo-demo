@@ -5,10 +5,8 @@ import express from 'express';
 import http from 'http';
 import cors from 'cors';
 import bodyParser from 'body-parser';
-import {readFileSync} from 'fs';
-import resolvers from "./resolver/resolver";
-
-const typeDefs = readFileSync('./schema/schema.graphql', {encoding: 'utf-8'});
+import resolvers from "./src/resolver/resolver";
+import typeDefs from "./src/schema/typedefs";
 
 interface MyContext {
   token?: String;

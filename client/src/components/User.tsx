@@ -1,9 +1,9 @@
 import {useQuery, gql} from "@apollo/client";
 import {User} from "@/types/user";
-import UseCard from "@/components/UseCard";
+import UserCard from "@/components/UserCard";
 import styles from './Users.module.css';
 
-const QUERY = gql`
+export const QUERY = gql`
     query GET_USERS($offset: Int, $limit: Int) {
         user(offset:$offset , limit: $limit ) {
             firstName
@@ -32,18 +32,17 @@ export default function Users() {
   }
 
   if (error) {
-    console.error(error);
-    return null;
+    return <h2>An error occurred</h2>;
   }
 
   return (
-    <section className={styles.container}>
+    <section className={styles.container} data-testid="user">
       <header>
         <h1> USERS </h1>
       </header>
       <main className={styles.main}>
         {data.user.length && data.user.map((user: User, index: number) => (
-          <UseCard key={user.email} user={user}/>
+          <UserCard key={user.email} user={user}/>
         ))}
       </main>
       <footer className={styles.footer}>

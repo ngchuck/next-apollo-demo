@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  server:
+    container_name: graphql-server-container
+    restart: always
+    build: .
+    command: npm run start
+    environment:
+      - PORT=4000
+    ports:
+      - "4000:4000"

@@ -1,7 +1,7 @@
 import {User} from '@/types/user';
 import styles from './UserCard.module.css'
 
-const UseCard = ({user}: { user: User }) => {
+const UserCard = ({user}: { user: User }) => {
   if (!user) {
     return (<p> User has no data</p>)
   }
@@ -16,4 +16,4 @@ const UseCard = ({user}: { user: User }) => {
     </div>
   )
 }
-export default UseCard;
+export default UserCard;
