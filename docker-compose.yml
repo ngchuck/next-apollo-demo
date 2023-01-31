@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  server:
+    container_name: graphql-server-container
+    restart: always
+    build: ./server
+    command: npm run start
+    environment:
+      - PORT=4000
+    ports:
+      - "4000:4000"
+  client:
+    container_name: next-client
+    restart: always
+    build: ./client
+    command: ["node", "server.js"]
+    depends_on:
+      - server
+    environment:
+      - PORT=3000
+    ports:
+      - "3000:3000"

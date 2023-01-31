@@ -18,7 +18,7 @@ RUN \
 FROM node:16-alpine AS builder
 WORKDIR /src
 COPY --from=deps /src/node_modules ./node_modules
-COPY .. .
+COPY . .
 
 # Next.js collects completely anonymous telemetry data about general usage.
 # Learn more here: https://nextjs.org/telemetry
